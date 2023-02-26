@@ -50,10 +50,13 @@ class _ProfileState extends State<Profile> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Stack(
+                      alignment: Alignment.center,
                       children: [
                         CircleAvatar(
                           radius: 60,
-                          backgroundColor: Colors.white,
+                          backgroundColor: context.watch<ThemeManager>().isDark
+                              ? Color(0xFF303030)
+                              : Colors.white,
                         ),
                         ClipRRect(
                             borderRadius: BorderRadius.circular(50.0),
@@ -63,7 +66,6 @@ class _ProfileState extends State<Profile> {
                               width: 100,
                             )),
                       ],
-                      alignment: Alignment.center,
                     ),
                   ],
                 ),

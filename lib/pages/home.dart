@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:practice/pages/profile.dart';
 
+import 'duck.dart';
+
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
@@ -12,10 +14,7 @@ class _HomeState extends State<Home> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
 
   static const List<Widget> widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
+    Ducks(),
     Text(
       'Index 1: Business',
       style: optionStyle,
